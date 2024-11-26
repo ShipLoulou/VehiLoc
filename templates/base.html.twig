@@ -14,7 +14,7 @@
 		<body>
 			<header>
 				<nav>
-					<a href="index.html"><img src="assets/img/logo.png" alt="Vehicloc"/></a>
+					<a href="index.html"><img src="{{ asset('assets/img/logo.png') }}" alt="Vehicloc"/></a>
 					<a href="add.html" class="btn-nav">Ajouter une voiture</a>
 				</nav>
 				{% block header %}{% endblock %}
@@ -33,8 +33,8 @@
 							<a href="#">Nous contacter</a>
 						</li>
 						<li>
-							<a href="#"><img src="assets/icons/instagram.png" alt="Instagram"/></a>
-							<a href="#"><img src="assets/icons/facebook.png" alt="Facebook"/></a>
+							<a href="#"><img src="{{ asset('assets/icons/instagram.png') }}" alt="Instagram"/></a>
+							<a href="#"><img src="{{ asset('assets/icons/facebook.png') }}" alt="Facebook"/></a>
 						</li>
 					</ul>
 					<ul>

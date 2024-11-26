@@ -27,4 +27,18 @@ class CarController extends AbstractController
             'cars' => $cars
         ]);
     }
+
+    #[Route('/voiture/{id}', name: 'app_one_car')]
+    public function carDetails($id)
+    {
+        $car = $this->carRepository->find($id);
+
+        if (!$car) {
+            throw $this->createNotFoundException("La voiture n'existe pas.");
+        }
+
+        return $this->render('one-car.html.twig', [
+            'car' => $car
+        ]);
+    }
 }

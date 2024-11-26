@@ -19,9 +19,9 @@ class AppFixtures extends Fixture
             $car = new Car;
             $car
                 ->setName($nameCar[$index])
-                ->setDescription('ou similaire | Saint-Étienne')
-                ->setMonthlyPrice($faker->numberBetween($min = 28, $max = 40))
-                ->setDailyPrice($faker->numberBetween($min = 800, $max = 700))
+                ->setDescription($faker->realText(mt_rand(50, 100)))
+                ->setDailyPrice($faker->numberBetween($min = 28, $max = 40))
+                ->setMonthlyPrice($faker->numberBetween($min = 800, $max = 700))
                 ->setPlaces(4)
                 ->setMotor('Manuelle')
             ;
