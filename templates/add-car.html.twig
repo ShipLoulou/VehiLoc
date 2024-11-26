@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<section id="add">
+		<a href="index.html">← Retour</a>
+		<h1>Ajouter une voiture</h1>
+		{{ form_start(formView) }}
+
+		{{ form_errors(formView) }}
+
+		{{ form_row(formView.name) }}
+		{{ form_row(formView.description) }}
+
+		<div class="flex-input">
+			{{ form_row(formView.monthlyPrice) }}
+			{{ form_row(formView.dailyPrice) }}
+		</div>
+		<div class="flex-input">
+			{{ form_row(formView.places) }}
+			{{ form_row(formView.motor) }}
+		</div>
+
+		<button class="btn-add">Ajouter</button>
+
+		{{ form_end(formView) }}
+	</section>
+{% endblock %}
